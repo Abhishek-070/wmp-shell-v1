@@ -3,3 +3,4 @@ dnf -qy module disable postgresql
 dnf install -y postgresql16-server postgresql16
 /usr/pgsql-16/bin/postgresql-16-setup initdb
 
+sudo sed -e "/listen_addresses/ c listen_addresses='*'" -n /var/lib/pgsql/16/data/postgresql.conf
