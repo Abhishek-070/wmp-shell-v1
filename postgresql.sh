@@ -6,4 +6,4 @@ sudo sed -e "/listen_addresses/ c listen_addresses='*'" -n /var/lib/pgsql/16/dat
 cp Pg_hba.conf /var/lib/pgsql/16/data/pg_hba.conf
 
 systemctl restart postgresql-16
-postgres /usr/pgsql-16/bin/psql -f schema.sql
+sudo -u postgres /usr/pgsql-16/bin/psql -f schema.sql
